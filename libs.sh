@@ -29,6 +29,7 @@ if [ "$DOWNLOAD" = true ]; then
     tar -xvf "${DEST}"
     rm -f "${DEST}"
 
+    echo "${VERSION}" > ${LOCK}
     cd react-native-pjsip-builder-2.8.1
     ./release.sh
     cp -rf dist/ios/VialerPJSIP.framework ../ios/
